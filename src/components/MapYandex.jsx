@@ -14,7 +14,7 @@ export default function MapYandex() {
   return (
     <div className='cont-map'>
       <YMaps>
-        <Map height='100%' width='100%'
+        <Map
           defaultState={setState}
           modules={['control.ZoomControl', 'control.FullscreenControl']}>
           {PointData.map(tractor =>
