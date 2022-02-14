@@ -1,0 +1,10 @@
+.cont-map {
+  width: 50%;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+Map {
+  height: 100%;
+  width: 100%;
+}
