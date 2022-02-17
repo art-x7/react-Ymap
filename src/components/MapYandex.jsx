@@ -1,7 +1,7 @@
 import React from 'react';
 import './MapYandex.css';
 import { YMaps, Map, Placemark } from 'react-yandex-maps'
-import { PointData } from './PointData'
+import PointFetching from './PointFetching'
 
 
 const setState = {
@@ -17,12 +17,7 @@ export default function MapYandex() {
         <Map
           defaultState={setState}
           modules={['control.ZoomControl', 'control.FullscreenControl']}>
-          {PointData.map(tractor =>
-          <Placemark  modules={['geoObject.addon.balloon']}
-          defaultGeometry={[tractor.coordX, tractor.coordY]}
-          properties={{
-              balloonContentBody:`${tractor.name} have ${tractor.charge} %`}}/>
-          )}
+          <PointFetching />
         </Map>
       </YMaps>
     </div>
